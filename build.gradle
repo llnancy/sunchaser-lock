@@ -15,12 +15,20 @@ targetCompatibility = JavaVersion.VERSION_1_8
 compileJava.options.encoding = StandardCharsets.UTF_8
 compileTestJava.options.encoding = StandardCharsets.UTF_8
 
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

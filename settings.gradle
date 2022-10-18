@@ -1,3 +1,4 @@
 rootProject.name = 'sunchaser-lock'
 include 'sunchaser-lock-common'
 include 'sunchaser-lock-core'
+include 'sunchaser-lock-base'
